@@ -202,8 +202,8 @@
   /* Cartel del gato: cambia texto en hover/tap y vuelve solo */
   const signCat = document.getElementById('signCat');
   const signText = document.getElementById('signText');
-  const originalMsg = 'Olenka esta ';
-  const altMsg = 'pagina solo es tuya';
+  const originalMsg = ' Madre de ';
+  const altMsg = '8 gatos';
   let revertTimer;
   function showAlt(){ clearTimeout(revertTimer); signText.textContent = altMsg; revertTimer = setTimeout(()=>signText.textContent=originalMsg, 2200); }
   function showOriginal(){ clearTimeout(revertTimer); revertTimer = setTimeout(()=>signText.textContent=originalMsg, 300); }
