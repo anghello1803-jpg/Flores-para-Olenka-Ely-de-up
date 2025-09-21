@@ -22,21 +22,17 @@
   .only-you{margin-top:6px;color:#ffe390;font-weight:600;letter-spacing:.2px;opacity:0;animation:fadein 1.8s ease .3s forwards}
   @keyframes fadein{to{opacity:1}}
 
-  /* Música (solo Spotify grande) */
-  .music{margin:16px auto 10px;max-width:820px;display:grid;gap:8px}
-  .note{text-align:center;font-size:14px;opacity:.9}
-
-  /* Ramo (ajustado) */
-  .bouquet{display:grid;place-items:center;margin:-6px auto 8px;height:min(54svh,500px)}
+  /* 1) FLORES (primero) */
+  .bouquet{display:grid;place-items:center;margin:12px auto 16px;height:min(54svh,500px)}
   @keyframes bloom{from{transform:scale(0) translateY(40px);opacity:0}to{transform:scale(1) translateY(0);opacity:1}}
   @keyframes sway{0%,100%{transform:rotate(-1.3deg)}50%{transform:rotate(1.3deg)}}
   @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.035)}}
   .stem{transform-origin:bottom center;animation:sway 5.5s ease-in-out infinite}
   .petal{transform-origin:center;animation:pulse 3.2s ease-in-out infinite}
 
-  /* GATOS SVG */
-  .cats{position:relative;display:grid;grid-template-columns:repeat(4,minmax(60px,1fr));gap:14px;justify-items:center;margin:10px auto 4px;max-width:760px}
-  .cat{width:90px;max-width:22vw;filter:drop-shadow(0 2px 6px rgba(0,0,0,.25));opacity:0;animation:pop .7s ease forwards,bounce 3s ease-in-out infinite}
+  /* 2) GATOS (después de las flores) */
+  .cats{position:relative;display:grid;grid-template-columns:repeat(4,minmax(60px,1fr));gap:18px;justify-items:center;margin:6px auto 18px;max-width:820px}
+  .cat{width:92px;max-width:22vw;filter:drop-shadow(0 2px 6px rgba(0,0,0,.25));opacity:0;animation:pop .7s ease forwards,bounce 3s ease-in-out infinite}
   .cat:nth-child(1){animation-delay:.05s,.2s}
   .cat:nth-child(2){animation-delay:.1s,.4s}
   .cat:nth-child(3){animation-delay:.15s,.6s}
@@ -59,9 +55,13 @@
   @keyframes wiggle{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2deg)}}
   .tap{fill:#b38807;font-size:10px}
 
-  /* feedback de click del gato que maúlla */
+  /* gatito que maúlla: feedback */
   .meow-active{animation:meowpop .3s ease}
   @keyframes meowpop{from{transform:scale(1.05)}to{transform:scale(1)}}
+
+  /* 3) SPOTIFY (al final) */
+  .music{margin:12px auto 10px;max-width:860px;display:grid;gap:8px}
+  .note{text-align:center;font-size:14px;opacity:.9}
 
   footer{margin-top:12px;text-align:center;font-size:13px;opacity:.85}
   .sig{color:#ffe390;font-weight:600}
@@ -76,16 +76,7 @@
     <p class="sub only-you">🌟 Esta página solo es tuya, Olenka 🌟</p>
     <p class="sub">Feliz 21 de septiembre — que este brillo te acompañe siempre. <br> Con música de <strong>Sabrina Carpenter</strong> y todo mi cariño.</p>
 
-    <!-- SOLO SPOTIFY (grande con canciones) -->
-    <section class="music">
-      <div class="note">Dale play a <strong>Sabrina Carpenter</strong> mientras ves las flores 💛</div>
-      <!-- Usa el embed del artista; puedes cambiar por un álbum o playlist si quieres -->
-      <iframe style="border-radius:16px" src="https://open.spotify.com/embed/artist/74KM79TiuVKeVCqs8QtB0B?utm_source=generator"
-        width="100%" height="380" frameborder="0"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    </section>
-
-    <!-- Ramo de girasoles -->
+    <!-- 1) FLORES -->
     <div class="bouquet" role="img" aria-label="Ramo de girasoles animado">
       <svg width="100%" height="100%" viewBox="0 0 600 520" xmlns="http://www.w3.org/2000/svg">
         <g style="transform-origin:300px 480px;animation:bloom 1300ms cubic-bezier(.2,.9,.2,1) 80ms both">
@@ -102,7 +93,7 @@
           </g>
           <g transform="translate(240,250)">
             <circle cx="0" cy="0" r="30" fill="var(--center)"/>
-            <g class="petal" fill="var(--accent)">
+            <g class="petal" fill="#ffde59">
               <polygon points="0,-80 18,-40 -18,-40"/><polygon points="56,-56 28,-24 16,-66"/>
               <polygon points="80,0 40,-18 40,18"/><polygon points="56,56 16,66 28,24"/>
               <polygon points="0,80 -18,40 18,40"/><polygon points="-56,56 -28,24 -16,66"/>
@@ -111,7 +102,7 @@
           </g>
           <g transform="translate(360,250)">
             <circle cx="0" cy="0" r="30" fill="var(--center)"/>
-            <g class="petal" fill="var(--accent)">
+            <g class="petal" fill="#ffde59">
               <polygon points="0,-80 18,-40 -18,-40"/><polygon points="56,-56 28,-24 16,-66"/>
               <polygon points="80,0 40,-18 40,18"/><polygon points="56,56 16,66 28,24"/>
               <polygon points="0,80 -18,40 18,40"/><polygon points="-56,56 -28,24 -16,66"/>
@@ -120,7 +111,7 @@
           </g>
           <g transform="translate(300,300) scale(1.15)">
             <circle cx="0" cy="0" r="34" fill="var(--center)"/>
-            <g class="petal" fill="var(--accent)">
+            <g class="petal" fill="#ffde59">
               <polygon points="0,-92 22,-44 -22,-44"/><polygon points="64,-64 32,-26 20,-76"/>
               <polygon points="92,0 44,-22 44,22"/><polygon points="64,64 20,76 32,26"/>
               <polygon points="0,92 -22,44 22,44"/><polygon points="-64,64 -32,26 -20,76"/>
@@ -131,27 +122,32 @@
       </svg>
     </div>
 
-    <!-- Definición de un gatito (símbolo reutilizable) -->
+    <!-- Definición del gato: permite colores por variables -->
     <svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
       <symbol id="cat" viewBox="0 0 120 120">
-        <circle cx="60" cy="65" r="40" fill="var(--accent)"/>
-        <polygon points="30,40 15,15 45,28" fill="var(--accent)"/>
-        <polygon points="90,40 105,15 75,28" fill="var(--accent)"/>
-        <circle cx="45" cy="60" r="6" fill="#2b1d0f"/>
-        <circle cx="75" cy="60" r="6" fill="#2b1d0f"/>
-        <rect class="eyeLid" x="39" y="55" width="12" height="10" fill="var(--accent)"/>
-        <rect class="eyeLid" x="69" y="55" width="12" height="10" fill="var(--accent)"/>
-        <polygon points="60,70 55,76 65,76" fill="#2b1d0f"/>
-        <path d="M55 79 Q60 84 65 79" stroke="#2b1d0f" stroke-width="3" fill="none" stroke-linecap="round"/>
-        <path d="M20 75 H48" stroke="#2b1d0f" stroke-width="3" stroke-linecap="round"/>
-        <path d="M72 75 H100" stroke="#2b1d0f" stroke-width="3" stroke-linecap="round"/>
+        <!-- variables: --fur (pelaje), --pupil (ojos), --whisker (bigotes) -->
+        <circle cx="60" cy="65" r="40" fill="var(--fur, #ffd36b)"/>
+        <polygon points="30,40 15,15 45,28" fill="var(--fur, #ffd36b)"/>
+        <polygon points="90,40 105,15 75,28" fill="var(--fur, #ffd36b)"/>
+        <!-- ojos -->
+        <circle class="pupil" cx="45" cy="60" r="6" fill="var(--pupil, #2b1d0f)"/>
+        <circle class="pupil" cx="75" cy="60" r="6" fill="var(--pupil, #2b1d0f)"/>
+        <!-- párpados (color del pelaje) -->
+        <rect class="eyeLid" x="39" y="55" width="12" height="10" fill="var(--fur, #ffd36b)"/>
+        <rect class="eyeLid" x="69" y="55" width="12" height="10" fill="var(--fur, #ffd36b)"/>
+        <!-- nariz y boca -->
+        <polygon points="60,70 55,76 65,76" fill="var(--pupil, #2b1d0f)"/>
+        <path d="M55 79 Q60 84 65 79" stroke="var(--pupil, #2b1d0f)" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <!-- bigotes -->
+        <path d="M20 75 H48" stroke="var(--whisker, #2b1d0f)" stroke-width="3" stroke-linecap="round"/>
+        <path d="M72 75 H100" stroke="var(--whisker, #2b1d0f)" stroke-width="3" stroke-linecap="round"/>
       </symbol>
     </svg>
 
-    <!-- 8 gatitos -->
+    <!-- 2) GATOS (colores distintos) -->
     <div class="cats" aria-hidden="true">
-      <!-- 1) con cartel que cambia -->
-      <svg class="cat" id="signCat" viewBox="0 0 160 170">
+      <!-- 1 negro (pupila y bigote claros) + cartel -->
+      <svg class="cat" id="signCat" viewBox="0 0 160 170" style="--fur:#111;--pupil:#ffe8aa;--whisker:#ffe8aa">
         <use href="#cat"/>
         <g class="sign" transform="translate(30,102)">
           <rect x="0" y="0" rx="8" ry="8" width="100" height="38" fill="#fff7d9" stroke="#caa23a" stroke-width="3"/>
@@ -161,19 +157,31 @@
         <rect x="78" y="88" width="4" height="22" fill="#caa23a"/>
       </svg>
 
-      <!-- 2-8) otros gatitos, el 5 maúlla -->
-      <svg class="cat" viewBox="0 0 120 120" style="--accent:#ffd36b"><use href="#cat"/></svg>
-      <svg class="cat" viewBox="0 0 120 120" style="--accent:#ffea96"><use href="#cat"/></svg>
-      <svg class="cat" viewBox="0 0 120 120" style="--accent:#ffe07a"><use href="#cat"/></svg>
-
-      <svg class="cat" id="meowCat" viewBox="0 0 120 120" style="--accent:#ffd862;cursor:pointer" role="button" aria-label="Gatito que maúlla">
+      <!-- 2 blanco -->
+      <svg class="cat" viewBox="0 0 120 120" style="--fur:#fff7e3;--pupil:#2b1d0f;--whisker:#2b1d0f"><use href="#cat"/></svg>
+      <!-- 3 gris -->
+      <svg class="cat" viewBox="0 0 120 120" style="--fur:#9aa0a6;--pupil:#1b1109;--whisker:#1b1109"><use href="#cat"/></svg>
+      <!-- 4 naranja -->
+      <svg class="cat" viewBox="0 0 120 120" style="--fur:#ffb84d"><use href="#cat"/></svg>
+      <!-- 5 crema (maúlla al tocar) -->
+      <svg class="cat" id="meowCat" viewBox="0 0 120 120" style="--fur:#ffe0a6;cursor:pointer" role="button" aria-label="Gatito que maúlla">
         <use href="#cat"/>
       </svg>
-
-      <svg class="cat" viewBox="0 0 120 120" style="--accent:#fff0b0"><use href="#cat"/></svg>
-      <svg class="cat" viewBox="0 0 120 120" style="--accent:#ffda6e"><use href="#cat"/></svg>
-      <svg class="cat" viewBox="0 0 120 120" style="--accent:#ffe48b"><use href="#cat"/></svg>
+      <!-- 6 dorado -->
+      <svg class="cat" viewBox="0 0 120 120" style="--fur:#ffd862"><use href="#cat"/></svg>
+      <!-- 7 pantera (muy oscuro, pupilas claras) -->
+      <svg class="cat" viewBox="0 0 120 120" style="--fur:#000;--pupil:#ffd;--whisker:#ffd"><use href="#cat"/></svg>
+      <!-- 8 gris oscuro -->
+      <svg class="cat" viewBox="0 0 120 120" style="--fur:#53565a;--pupil:#ffe8aa;--whisker:#ffe8aa"><use href="#cat"/></svg>
     </div>
+
+    <!-- 3) SPOTIFY (abajo del todo) -->
+    <section class="music">
+      <div class="note">Dale play a <strong>Sabrina Carpenter</strong> mientras disfrutas las flores y los gatitos 💛</div>
+      <iframe style="border-radius:16px" src="https://open.spotify.com/embed/artist/74KM79TiuVKeVCqs8QtB0B?utm_source=generator"
+        width="100%" height="380" frameborder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </section>
 
     <footer>Para: <span class="sig">Olenka</span> · De: <span class="sig">Lugui</span> · 21 de septiembre ✨</footer>
   </div>
@@ -197,22 +205,19 @@
   const originalMsg = 'Para Olenka';
   const altMsg = 'Esta página solo es tuya';
   let revertTimer;
-
   function showAlt(){ clearTimeout(revertTimer); signText.textContent = altMsg; revertTimer = setTimeout(()=>signText.textContent=originalMsg, 2200); }
   function showOriginal(){ clearTimeout(revertTimer); revertTimer = setTimeout(()=>signText.textContent=originalMsg, 300); }
-
   signCat.addEventListener('mouseenter', showAlt);
   signCat.addEventListener('mouseleave', showOriginal);
   signCat.addEventListener('touchstart', (e)=>{ e.preventDefault(); showAlt(); }, {passive:false});
 
-  /* Gatito que maúlla (voz del navegador diciendo "miau") */
+  /* Gatito que maúlla (voz del navegador) */
   const meowCat = document.getElementById('meowCat');
   function meow(){
     if ('speechSynthesis' in window){
       const u = new SpeechSynthesisUtterance('miau');
-      // Intento voz española/latina si existe
       const voices = speechSynthesis.getVoices();
-      const pref = voices.find(v=>/es-|Spanish/i.test(v.lang || v.name)) || voices[0];
+      const pref = voices.find(v=>/es-|Spanish/i.test(v.lang||v.name)) || voices[0];
       if(pref) u.voice = pref;
       u.rate = 1.0; u.pitch = 1.3; u.volume = 1;
       window.speechSynthesis.speak(u);
@@ -221,9 +226,7 @@
     meowCat.classList.add('meow-active');
     setTimeout(()=>meowCat.classList.remove('meow-active'), 300);
   }
-  // Algunas veces las voces no están listas de inmediato
-  window.speechSynthesis && window.speechSynthesis.onvoiceschanged;
-
+  window.speechSynthesis && (window.speechSynthesis.onvoiceschanged ||= ()=>{});
   meowCat.addEventListener('click', meow);
   meowCat.addEventListener('touchstart', (e)=>{ e.preventDefault(); meow(); }, {passive:false});
 </script>
